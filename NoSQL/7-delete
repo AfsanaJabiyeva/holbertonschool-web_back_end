@@ -1,2 +1,2 @@
 // delete document
-db.school.drop({name: "Holberton school"})
+db.school.drop({name: "Holberton school"}, {multi: true})
