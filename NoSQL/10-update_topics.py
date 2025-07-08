@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
-import pymongo
+
 """update topics based on name"""
+import pymongo
 
 
 def update_topics(mongo_collection, name, topics):
