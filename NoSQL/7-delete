@@ -1,0 +1,2 @@
+// delete document
+db.school.drop({name: "Holberton school"})
