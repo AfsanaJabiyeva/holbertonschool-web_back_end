@@ -1,19 +1,2 @@
 // my comment
-#!/usr/bin/env python3
-
-"""list all databases"""
-
-from pymongo import MongoClient
-
-
-def list_dbs():
-"""list all databases"""
-    dbs = MongoClient().list_database_names()
-    for db in dbs:
-        name = db.get("name")
-        size = db.get("sizeOnDisk", 0) / (1024 ** 3)
-        print(f"{name}\t{size:.3f}GB")
-
-if __name__ == "__main__":
-    list_dbs()
-
+show dbs
