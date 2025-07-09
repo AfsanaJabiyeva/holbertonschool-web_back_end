@@ -13,3 +13,9 @@ def log_stats(mongo_collection):
     """count status checks"""
     status = collection.count_documents({"method": "GET", "path": "/status"})
     print(f"{status} status check")
+
+if __name__=="__main":
+    client = MongoClient('mongodb://127.0.0.1:27017')
+    collection = client.logs.nginx
+    log_stats(collection)
+
